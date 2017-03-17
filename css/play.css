@@ -1,0 +1,227 @@
+.play_con{
+	max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    margin-top: 80px;
+}
+.play_con_le{
+	float: left;
+	width: 50%;
+}
+.play_con_ri{
+	float: left;
+	width: 50%;
+}
+.play_le_data{
+	position: relative;
+    height: 250px;
+    padding-left: 305px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+.play_le_data_cover{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 250px;
+}
+.play_le_data_cover img{
+	width: 100%;
+	height: 100%;
+}
+.play_le_data_cont{
+	padding-top: 50px;
+}
+.play_le_name{
+    height: 50px;
+    line-height: 50px;
+    font-size: 31px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.play_le_singer{
+	height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+.play_le_singer a{
+	margin-right: 10px;
+}
+.play_le_singer i{
+	float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon_sprite.png) -20px -240px;
+    margin: 5px 7px 0 0;
+}
+.play_le_info{
+	width: 450px;
+    overflow: hidden;
+    padding-top: 8px;
+}
+.play_le_actions{
+	position: absolute;
+    bottom: 23px;
+}
+/*公共↓*/
+.data_statistic_green{
+	border-radius: 2px;
+	min-width: 74px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid #31c27c;
+    border-right: 0px;
+    background-color: #31c27c;
+    color: #fff;
+    transition: all .4s;
+}
+.data_statistic_green:hover{
+	color:white;
+}
+.data_statistic_green:hover {
+    background-color: #2caf6f;
+    border-color: #2caf6f;
+}
+.data_statistic_green i{
+	display: inline-block;
+    margin-right: 6px;
+    background-image: url(../img/icon_sprite.png);
+    width: 13px;
+    height: 16px;
+    background-position: -80px -220px;
+    background-repeat: no-repeat;
+}
+/*公共↑*/
+/*右部分*/
+.play_ri_ul{
+	text-align: center;
+}
+.play_ri_ul li{
+	height: 42px;
+    line-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    color: black;
+}
+
+/*播放器*/
+.mpplayer{
+	position: fixed;
+	width: 500px;
+    min-width: 300px;
+    height: 200px;
+    background-color: #999999;
+    background-color: rgba(0,0,0,.35);
+    box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.3);
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    bottom: 60px;
+    left: 0px;
+    z-index: 9;
+}
+.mpplayer_con{
+	position: absolute;
+	width: 500px;
+    height: 2px;
+    background: rgba(255,255,255,.1);
+   	bottom: 50px;
+}
+.mpplayer_progress{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: aquamarine;
+}
+.mpplayer_progress i{
+	position: absolute;
+	top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background-position: 0 -170px;
+    opacity: 1;
+    background-image: url(../img/player.png);
+}
+.con_sus_play{
+	position: absolute;
+    width: 21px;
+    height: 29px;
+    background-position: 0 0;
+    cursor: pointer;
+     background-image: url(../img/player.png);
+}
+.consusplay {
+    background-position: -30px 0;
+}
+.con_sus_voice{
+	position: absolute;
+	width: 26px;
+    height: 21px;
+    left: 50px;
+    top: 5px;
+    cursor: pointer;
+    background-position: 0 -144px;
+    background-image: url(../img/player.png);
+}
+.consusvoice{
+    background-position: 0 -182px;
+}
+.mpplayer_con_sus{
+	position: absolute;
+	bottom: 40px;
+}
+.mpplayer_con_time{
+	position: absolute;
+	right: 50px;
+	color:  #C9C9C9;
+	bottom: 60px;
+}
+.mpplayer_con_time div{
+	float: left;
+}
+.con_time_le{
+	margin-right: 10px;
+}
+.mpplayer_con_img{
+	position: absolute;
+	top: 30px;
+	width: 100px;
+	height: 100px;
+}
+.mpplayer_con_img img{
+	width: 100%;
+	height: 100%;
+}
+.mpplayer_con_info{
+	position: absolute;
+	top: 60px;
+	left: 170px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.mpplayer_con_info a{
+	font-size: 16px;
+	font-weight: 400;
+	color:  #E6E6E6;
+	margin-right: 10px;
+}

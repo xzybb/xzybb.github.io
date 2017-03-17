@@ -1,0 +1,142 @@
+.singer_main{
+	max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.singer_main_tag{
+	background-color: #fbfbfd;
+    padding: 34px 0 17px 40px;
+    margin: 30px 0 20px;
+}
+.singer_tag_list{
+	padding-bottom: 3px;
+    height: auto;
+    zoom: 1;
+    clear: both;
+}
+.singer_tag_list li{
+	float: left;
+	height: 26px;
+    line-height: 27px;
+    overflow: hidden;
+    margin: 0 12px 14px 0;
+    transition: all .3s;
+}
+.singer_tag_list ul{
+	padding-bottom: 3px;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+}
+.singer_tag_list .tagList {
+    background-color: #31c27c;
+}
+.singer_tag_list .tagList a{
+	color: #fff;
+}
+.singer_tag_list a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 0px 20px 0 0;
+}
+/*获取数据*/
+.singerlist{
+	position: relative;
+	min-width: 1200px;
+    text-align: center;
+}
+.singerlist_ul li{
+	display: inline-block;
+	width: 20%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.singerlist_ul_li_box{
+	position: relative;
+    margin-right: 20px;
+    background-color: #fbfbfd;
+    min-height: 195px;
+    padding: 25px 0;
+    overflow: hidden;
+    clear: both;
+}
+.singerlist_ul_li_box img{
+	display: block;
+    width: 140px;
+    height: 140px;
+    float: inherit;
+    margin: 0 auto;
+    border-radius: 126px;
+    animation: ulLiBoxImg 1s infinite alternate;
+    background-size: 100% auto;
+    line-height: 140px;
+}
+@keyframes ulLiBoxImg{
+	0%{transform: scale(.9);}
+	100%{transform: scale(1);}
+}
+.ul_li_box_img{
+	width: 100%;
+	height: 140px;
+}
+.singerlist_li_tex{
+	display: block;
+	font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    zoom: 1;
+    margin: 20px 30px 4px;
+}
+/*底部*/
+.singer_list_bot{
+	width: 100%;
+	padding: 20px 0px;
+	background-color: #fff;
+}
+.singer_list_txt {
+	width: 1200px;
+    margin: 0 auto;
+	min-width: 1200px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.singer_list_txt li{
+	float: left;
+    width: 20%;
+}
+.singer_list_txt li a{
+	float: left;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 36px;
+}
+.singer_list_txt li a:hover {
+    color: #31c27c;
+    text-decoration: none;
+}
+/*背景*/
+.singer_bg{
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	margin-top: 50px;
+}
+.singer_bg img{
+	width: 100%;
+}
+.singer_bg h2{
+	position: inherit;
+	width: 494px;
+    height: 60px;
+    margin: 103px auto 0px auto;
+    background-position: 0 0;
+    background-image: url(../img/singer_tit.png);
+}
+

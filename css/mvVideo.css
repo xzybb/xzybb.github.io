@@ -1,0 +1,229 @@
+.album_con{
+	max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.album_con_tag{
+	position: relative;
+    margin: 80px 0 0;
+}
+.album_con_tag li{
+	float: left;
+	padding: 0 8px;
+    margin: 0 24px 15px 0;
+    cursor: pointer;
+    transition: all .6s;
+}
+.albuConList{
+    background-color: #31c27c;
+    color: #fff;
+}
+.tag_arrow .albuConList i{
+	background-position: -100px -260px;
+}
+.album_con_list{
+	position: relative;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+    line-height: 26px;
+    padding-left: 65px;
+}
+.album_con_list span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    width: 65px;
+}
+.tag_arrow  i{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url(../img/icon_sprite.png);
+    background-position: -120px -260px;
+    margin-left: 3px;
+}
+.popup_tag{
+	position: absolute;
+    top: 148px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    padding: 19px 0 5px;
+    z-index: 4;
+    -webkit-box-shadow: 0 0 10px rgba(183,183,183,.65);
+    box-shadow: 0 0 10px rgba(183,183,183,.65);
+    border: 0 none;
+}
+.popup_tag ul {
+    position: relative;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+    line-height: 26px;
+    padding-left: 65px;
+}
+/*内容开始了*/
+.album_detail{
+	position: relative;
+    margin: 100px 0 50px 0;
+}
+.album_detail_hd{
+	overflow: hidden;
+    height: 60px;
+}
+.album_detail_hd h2{
+	float: left;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 58px;
+}
+.detail_hd_switch{
+	position: absolute;
+    top: 7px;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px;
+    font-size: 0;
+}
+.detail_hd_switch a{
+	display: inline-block;
+	border-color: #c9c9c9;
+    padding: 0 16px;
+    height: 38px;
+    position: relative;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+}
+.detail_hd_switch a:hover{
+	color: black;
+}
+.detail_hd_switch_inc{
+	background-color: #31c27c;
+    color: #fff;
+    border-color: #31c27c;
+    z-index: 2;
+}
+
+/*下面是公共*/
+.item_img_top{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 10px;
+	cursor: pointer;
+	overflow: hidden;
+	animation:itemImgTop 1s;
+}
+@keyframes itemImgTop{
+	0%{border-radius: 100%;}
+	100%{border-radius: 0%;}
+}
+.item_img_top img{
+	width: 100%;
+	transition: all .4s;
+}
+.item_img_top:hover img{
+	transform: scale(1.2);
+}
+.item_img_top i{
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    margin: -35px;
+    width: 70px;
+    height: 70px;
+	opacity: 0;
+    transform: scale(0);
+    cursor: pointer;
+    transition: all .5s;
+    background-image: url(../img/cover_play.png);
+}
+.item_img_top:hover i{
+	z-index: 10;
+	transform: scale(1);
+	opacity: 0.9;
+}
+.item_img_top::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all .2s;
+}
+.item_img_top:hover::before{
+	z-index: 9;
+	background-color: #1758E6;
+	background: rgba(88,88,88,.3);
+}
+
+.item_title{
+	display: block;
+	width: 80%;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+}
+.item_title i {
+    position: absolute;
+    bottom: auto;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    background-image: url(../img/icon_sprite.png);
+    background-position: -80px -40px;
+    transition: all .4s;
+}
+.item_sp_bot span:hover,.item_title:hover{
+    color: #31c27c;
+    cursor: pointer;
+}
+.album_detail_Song ul li:hover .item_title i{
+	opacity: 1;
+}
+.item_title:hover i{
+	background-position: -80px -60px;
+}
+.item_sp_bot span{
+	display: block;
+	color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
+}
+/*上面都是公共*/
+
+/*模板开始 上面都是公共=========================================================*/
+.mv_detail_Song{
+	position: relative;
+	width: 100%;
+	transition: all 1s;
+}
+.mv_detail_Song_li{
+	float: left;
+    width: 25%;
+    padding-bottom: 44px;
+}
+.mv_item_box{
+	position: relative;
+    margin-right: 20px;
+}
+.igte{
+	float: left;
+	padding-right: 10px;
+}
+.igte i{
+	display: inline-block;
+    width: 19px;
+    height: 12px;
+    background-image: url(../img/icon_sprite.png);
+    background-position: -180px -20px;
+    margin-right: 5px;
+}

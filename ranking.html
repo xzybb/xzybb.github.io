@@ -1,0 +1,72 @@
+<!--排行榜-->
+<!--ranking-->
+<link rel="stylesheet" type="text/css" href="css/ranking.css"/>
+<!--扬帆 起航-->
+<div class="ranking_con">
+	<div class="ranking_con_le">
+		<div class="le_nav_list" ng-repeat="item in data">
+			<span class="le_nav_list_sp">{{item.GroupName}}</span>
+			<ul>
+				<li class="le_nav_list_li"  ng-repeat="item in item.List" ng-click="navlistLi($parent.$index,$index)" ng-class="{leNavListLi:$index==listLi[$parent.$index]}">
+					<a href="javascript:;" title="{{item.ListName}}">{{item.ListName}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ranking_con_ri">
+		<div class="ranking_con_ri_hd">
+			<span class="ri_hd_a">{{dabt.topinfo.ListName}}</span>
+			<span class="ri_hd_b">{{dabt.update_time}}</span>
+			<span class="ri_hd_c">榜单规则</span>
+			<span class="ri_hd_d">播放全部</span>
+		</div>
+		<div class="ri_songlist">
+			<ul class="songlist_header oddran">
+                <li class="songlist_name">歌曲</li>
+                <li class="songlist_author">歌手</li>
+                <li class="songlist_time">时长</li>
+            </ul>
+            <ul class="songlist_header" ng-repeat="item in dabt.songlist"  ng-class="{evenran: $even, oddran: $odd}">
+            	<a href="#/singer/{{item.data.songmid}}/{{item.data.songid}}">
+            	<div class="songlist_id" ng-class="{songListId:$index<3}">{{$index+1}}</div>
+                <li class="songlist_name">
+            		<img src="http://y.gtimg.cn/music/photo_new/T002R90x90M000{{item.data.albummid}}.jpg?max_age=2592000"/>
+            		{{item.data.songname}}
+                </li>
+                <li class="songlist_author">{{item.data.songorig}}</li>
+                <li class="songlist_time">{{toFix($index)}}</li>
+                </a>
+            </ul>
+		</div>
+		<!--页码-->
+		<div class="singer_page_nav">
+			<div class="pageindex_l"  ng-click="ifckfun(1,numss)" ng-if="namame!=1"><</div>
+			<span class="pageindex" ng-click="namafun(1)" ng-if="namame>=4">1</span>
+			<div class="pagemore" ng-if="namame>=4">...</div>
+			<span class="pageindex" ng-click="namafun(namame-2)" ng-if="namame>=3">{{namame-2}}</span>
+			<span class="pageindex" ng-click="namafun(namame-1)" ng-if="namame>=2">{{namame-1}}</span>
+			<span class="pageindex" ng-click="namafun(namame)" ng-class="{pageclick:namame}">{{namame}}</span>
+			<span class="pageindex" ng-click="namafun(namame+1)" ng-if="namame<=numss-1">{{namame+1}}</span>
+			<span class="pageindex" ng-click="namafun(namame+2)" ng-if="namame<=numss-2">{{namame+2}}</span>
+			<div class="pagemore"  ng-if="namame<=numss-3">...</div>
+			<div class="page_sss"  ng-click="namafun(numss)" ng-if="namame<=numss-3">{{numss}}</div>
+			<div class="pageindex_r" ng-click="ifckfun(2,numss)" ng-if="namame!=numss">></div>
+		</div>
+		<!--页码-->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

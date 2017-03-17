@@ -1,0 +1,330 @@
+body,html,div,span,h1,h2,h3,h4,h5,h6,img,video,a,p,ul,li,i{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #31c27c;
+    text-decoration: none;
+}
+img{
+	float: left;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: url(../img/bg_detail.jpg) 50% 60px repeat-x;
+	overflow-x: hidden;
+}
+body{
+	color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: poppin,'PingFang SC',Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}
+.content{
+	width: 100%;
+	min-height: 600px;
+    min-width: 1200px;
+    position: relative;
+}
+.content img{
+	background-image: url(../img/singer_300.png);
+	background-size: 100% 100%;
+}
+.indpxss{
+	color: #31c27c;
+}
+/*公共头部开始*/
+.box_top{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	top: 0px;
+	background-color: #fff;
+    z-index: 18;
+}
+.box_top_list{
+	position: relative;
+	width: 1200px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+.box_top_list ul{
+	height: 50px;
+    line-height: 50px;
+    padding-left: 100px;
+}
+.box_top_list ul li{
+	float: left;
+    font-size: 15px;
+    color: #333;
+    margin-right: 56px;
+}
+.box_top_list ul li a:hover{
+	color: #31c27c;
+}
+.box_top_list_ri{
+	position: absolute;
+    top: 6px;
+    right: 0px;
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 15px;
+    line-height: 36px;
+    height: 36px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.list_ri_input{
+	width: 200px;
+    height: 36px;
+    border: 0 none;
+    font-size: 14px;
+    background: 0 0;
+    outline-style: none;
+}
+.list_ri_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    width: 38px;
+    height: 35px;
+    overflow: visible;
+    background: 0 0;
+    cursor: pointer;
+}
+.list_ri_btn i{
+	position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/icon_sprite.png);
+    background-position: 0 -40px;
+}
+/*公共头部结束*/
+/*底部公共样式*/
+.box_bot{
+	position: relative;
+    padding: 40px;
+    min-width: 1200px;
+	width: 100%;
+	min-height: 100px;
+	background-color: #333;
+	color: #999;
+}
+.box_bot .box_bot_con{
+	min-width: 1200px;
+	min-height: 100px;
+}
+.box_bot_con p{
+	text-align: center;
+    line-height: 28px;
+}
+/*底部公共样式*/
+/*动画*/
+.bg_box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;/*==========================================================*/
+    transition: all 3s;
+}
+.bg_box div{
+	position: absolute;
+	transition: all 1s;
+}
+.bg_box div img{
+	width: 80px;
+}
+/*小div样式*/
+@keyframes boxOne{
+	0% {
+    	transform: translate(0px,0px) rotate(45deg);
+    }
+    25% {
+	    transform: translate(100px,300px) rotate(-60deg);
+	}
+	50% {
+	    transform: translate(-60px,600px) rotate(-200deg);
+	}
+	75% {
+	    transform: translate(30px,800px) rotate(-150deg);
+	}
+	100% {
+	    transform: translate(100px,1000px);
+	}
+}
+@keyframes boxTwo{
+	0% {
+    	opacity: 0;
+    	transform: translate(0px,0px) rotate(0deg);
+	}
+	25% {
+	    transform: translate(20px,300px) rotate(-90deg);
+	}
+	50% {
+	    transform: translate(10px,400px) rotate(-120deg);
+	}
+	75% {
+	    transform: translate(60px,600px) rotate(-300deg);
+	}
+	100% {
+	    opacity: 1;
+	    transform: translate(-10px,900px) rotate(-360deg);
+	}
+}
+@keyframes boxTthree{
+	0% {
+    	transform: translate(0px,0px) rotate(0deg);
+	}
+	25% {
+	    transform: translate(-20px,300px) rotate(360deg);
+	}
+	50% {
+	    transform: translate(-40px,400px) rotate(0deg);
+	}
+	75% {
+	    transform: translate(-60px,600px) rotate(360deg);
+	}
+	100% {
+	    transform: translate(-80px,900px) rotate(0deg);
+	}
+}
+@keyframes boxFour{
+	0% {
+    	transform: translate(0px,0px) rotate(0deg) skew(0deg);
+	}
+	25% {
+	    transform: translate(30px,300px) rotate(-90deg) skew(30deg);
+	}
+	50% {
+	    transform: translate(60px,400px) rotate(-120deg) skew(0deg);
+	}
+	75% {
+	    transform: translate(70px,600px) rotate(-300deg) skew(-30deg);
+	}
+	100% {
+	    transform: translate(130px,900px) rotate(-360deg) skew(0deg);
+	}
+}
+/*背景1
+.bg_box_one{
+	background-color: #1758E6;
+}
+背景2
+.bg_box_two{
+	background-color: #E36400;
+}
+背景3
+.bg_box_three{
+	background-color: #E0B33C;
+}
+背景4
+.bg_box_four{
+	background-color: #C56FC6;
+}*/
+
+/*页码*/
+.singer_page_nav {
+    clear: both;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 0;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+  	-khtml-user-select: none; /*早期浏览器*/
+    user-select: none;/*禁止选中文字*/
+}
+.pageindex,.pageindex_l,.pageindex_r,.pagemore,.page_sss{
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    min-width: 24px;
+    cursor: pointer;
+    transition: all .6s;
+}
+.pageindex:hover,.pageindex_l:hover,.pageindex_r:hover,.page_sss:hover {
+    color: #fff;
+    background-color: #31c27c;
+}
+.pageclick{
+	color: #fff;
+    background-color: #31c27c;
+}
+.pageindex_l{
+	
+}
+/*页码*/
+/*搜索框*/
+.js_smartbox{
+	overflow: hidden;
+	background-color: #fff;
+	border-right: 1px solid #C9C9C9 ;
+	border-left: 1px solid #C9C9C9 ;
+	border-radius: 10px;
+	transition: all .3s;
+}
+.box_top_list_ri .js_smartbox ul{
+	position: relative;
+	height: auto;
+	line-height: 28px;
+	padding-left: 20px;
+	clear: both;
+	/*border-bottom: 1px solid #999999;*/
+}
+.box_top_list_ri .js_smartbox ul::before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	border-bottom: 1px solid  #BFBFBF ;
+}
+.box_top_list_ri .js_smartbox ul li{
+	float: none;
+	font-weight: 700;
+	margin-right: 0px;
+	display: flex;
+}
+.box_top_list_ri .js_smartbox ul li:hover span,
+.box_top_list_ri .js_smartbox ul li:hover p{
+	color: #31c27c;
+}
+.box_top_list_ri .js_smartbox ul li span{
+	color: #696969;
+	font-weight: 700;
+	font-size: 16px;
+	margin-right: 10px;
+	float: left;
+	max-width: 180px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.box_top_list_ri .js_smartbox ul li p{
+	color:  #999999;
+	font-weight: 400;
+	font-size: 16px;
+	float: left;
+	max-width: 100px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

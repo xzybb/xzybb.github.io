@@ -1,0 +1,118 @@
+<!--歌手 去吧皮卡丘-->
+<link rel="stylesheet" type="text/css" href="css/homepage.css"/>
+<!--这是一个标题-->
+<div class="boxCarousel_hd hdTitle_a">
+	<i></i>
+</div>
+<!--上面是一个标题-->
+<!--能轮播的轮播图-->
+<div id="boxCarousel" class="boxCarousel">
+	<div class="boxCarousel_le" ng-click="plus()"><i></i></div>
+	<ul class="boxCarousel_ul_a">
+		<li ng-repeat="item in data.data.focus" class="{{cass[$index]}}">
+			<a href="javascript:;">
+				<img src="{{item.pic}}"/>
+			</a>
+		</li>
+	</ul>
+	<ul class="pointLine">
+		<li ng-repeat="epem in data.data.focus" ng-click="poLi($index)">
+			<i  ng-class="{'bck':'p2'==cass[$index]}"></i>
+		</li>
+	</ul>
+	<div class="boxCarousel_ri" ng-click="btract()"><i></i></div>
+</div>
+<!--这是一个标题-->
+<div class="boxCarousel_hd hdTitle_b">
+	<i></i>
+</div>
+<!--上面是一个标题-->
+<!--这里是热门歌单-->
+<div class="boxPopularSong">
+	<div id="popularSong" class="popularSong">
+		<ul>
+			<li ng-repeat="ieam in data.data.hotdiss.list" ng-class="{evenLi: $even, oddLi: $odd}">
+				<div class="po_li_top">
+					<img src="{{ieam.imgurl}}"/>
+					<i></i>
+				</div>
+				<div class="po_li_bot">
+					<span><p title="{{ieam.dissname}}">{{ieam.dissname}}</p><i></i></span>
+					<span>播放量:{{ieam.listennum}}</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--上面是热门歌单-->
+
+<!--mv首播开始了-->
+<div class="bg_directSeeding">
+<!--这是一个标题-->
+<div class="boxCarousel_hd hdTitle_c">
+	<i></i>
+</div>
+<!--上面是一个标题-->
+<div class="directSeeding">
+	<div class="dir_tab">
+		<ul>
+			<li ng-repeat="ie in dirTab" ng-class="{'dirTaba':$index==opk}" ng-click="opklia($index)">{{ie}}</li>
+		</ul>
+	</div>
+	<ul class="dir_list" ng-repeat="inte in data.data.shoubomv" ng-if="$index==xpe">
+		<li ng-repeat="inda in inte track by $index" style="animation: dirList {{$index+1/5}}s forwards;">
+			<a href="#/mvVideo/{{inda.vid}}">
+			<div class="po_li_top">
+				<img src="https://shp.qpic.cn/qqvideo_ori/0/{{inda.vid}}_360_204/0"/>
+				<i></i>
+			</div>
+			<div class="po_li_bot">
+				<span><p title="{{inda.mvdesc}}">{{inda.mvdesc}}</p></span>
+				<span>{{inda.singer_name}}</span>
+				<span><p class="po_li_bot_img"></p>{{inda.listennum}}</span>
+			</div>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!--mv直播结束了-->
+<!--排行榜开始啦-->
+<div class="box_list">
+	<!--这是一个标题-->
+	<div class="boxCarousel_hd hdTitle_c">
+		<i></i>
+	</div>
+	<!--上面是一个标题-->
+	<div class="box_list_con">
+		<ul class="box_list_con_ul">
+			<li ng-repeat="item in data.data.toplist" class="box_list_con_li">
+				<div class="con_li_bg con_li_bg_w_{{$index}}"></div>
+				<div class="con_li_mask"></div>
+				<i class="con_li_i"></i>
+				<i class="con_li_ib"></i>
+				<h3 class="con_li_hd">
+					<i></i>
+					<div class="con_li_hd_text">{{item.ListName.split("·")[1]}}</div>
+				</h3>
+				<ul class="li_li_ul">
+					<li class="li_li_song" ng-repeat="iem in item.songlist track by $index">
+						<a href="#/singer/pers/{{iem.songid}}">
+						<div class="li_li_song_le">{{$index+1}}</div>
+						<div class="li_li_song_ri">
+							<!--<a href="">-->
+								<div class="song_ri_id" title="{{iem.songname}}">{{iem.songname}}</div>
+								<div class="song_ri_name" title="{{iem.singername}}">{{iem.singername}}</div>
+							<!--</a>-->
+						</div>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--排行榜开始啦-->
+
+
+

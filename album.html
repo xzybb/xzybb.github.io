@@ -1,0 +1,76 @@
+<!--专辑 去吧皮卡丘-->
+<link rel="stylesheet" type="text/css" href="css/album.css"/>
+<!--开始旅程-->
+<div class="album_con">
+	<div class="album_con_tag">
+		<div class="album_con_list" ng-repeat="item in typess" ng-class="{tag_arrow:$index==typess.length-1}">
+			<span>{{item}}</span>
+			<ul ng-repeat="item in aggregate[$index]">
+				<li ng-click="aggrefun($parent.$index,$index)" ng-class="{albuConList:$index==dianji[$parent.$index]}">
+					{{item}}
+					<i></i>
+				</li>
+			</ul>
+		</div>
+		<ul>
+			<li>
+				<i></i>
+			</li>
+		</ul>
+		<div class="popup_tag" ng-repeat="item in scree" ng-if="$index==datalist[3]">
+			<ul>
+				<li ng-repeat="it in item" ng-click="grefun($parent.$index,$index)"  ng-class="{albuConList:$index==dianbx[$parent.$index]}">
+					{{it}}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--内容开始-->
+	<div class="album_detail">
+		<div class="album_detail_hd">
+			<h2>全部专辑</h2>
+			<div class="detail_hd_switch">
+				<a href="" ng-click="switchfun(1)" ng-class="{detail_hd_switch_inc:newest==1}">最新</a>
+				<a href="" ng-click="switchfun(2)" ng-class="{detail_hd_switch_inc:newest==2}">最热</a>
+			</div>
+		</div>
+		<!--模板的内容=====↓-->
+		<div class="album_detail_Song">
+			<ul>
+				<li ng-repeat="ieam in data.data.albumlist">
+					<a href="#album/{{ieam.album_mid}}">
+					<div class="detail_item_box">
+						<div class="item_img_top">
+							<img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000{{ieam.album_mid}}.jpg?max_age=2592000"/>
+							<i></i>
+						</div>
+						<span class="item_title">{{ieam.album_name}}<i></i></span>
+						<div class="item_sp_bot">
+							<span>{{ieam.singer_name}}</span>
+							<span>{{ieam.public_time}}</span>
+						</div>
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--模板的内容======↑-->
+		<!--页码-->
+		<div class="singer_page_nav">
+			<div class="pageindex_l"  ng-click="ifckfun(1,numss)" ng-if="namame!=1"><</div>
+			<span class="pageindex" ng-click="namafun(1)" ng-if="namame>=4">1</span>
+			<div class="pagemore" ng-if="namame>=4">...</div>
+			<span class="pageindex" ng-click="namafun(namame-2)" ng-if="namame>=3">{{namame-2}}</span>
+			<span class="pageindex" ng-click="namafun(namame-1)" ng-if="namame>=2">{{namame-1}}</span>
+			<span class="pageindex" ng-click="namafun(namame)" ng-class="{pageclick:namame}">{{namame}}</span>
+			<span class="pageindex" ng-click="namafun(namame+1)" ng-if="namame<=numss-1">{{namame+1}}</span>
+			<span class="pageindex" ng-click="namafun(namame+2)" ng-if="namame<=numss-2">{{namame+2}}</span>
+			<div class="pagemore"  ng-if="namame<=numss-3">...</div>
+			<div class="page_sss"  ng-click="namafun(numss)" ng-if="namame<=numss-3">{{numss}}</div>
+			<div class="pageindex_r" ng-click="ifckfun(2,numss)" ng-if="namame!=numss">></div>
+		</div>
+		<!--页码-->
+	</div>
+	
+</div>
+

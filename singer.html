@@ -1,0 +1,64 @@
+<link rel="stylesheet" type="text/css" href="css/singer.css"/>
+<!--内容开始了-->
+<!--背景-->
+<div class="singer_bg">
+	<img src="img/bg_singer.jpg"/>
+	<h2></h2>
+</div>
+<!--tagList-->
+<!--背景-->
+<div class="singer_main">
+	<div class="singer_main_tag">
+		<div class="singer_tag_list">
+			<ul class="singer_tag_list_ula">
+				<li ng-repeat="item in inger" ng-class="{tagList:$index==tasta}" ng-click="tastafun(1,$index)">
+					<a href="javascript:;" ng-click="clifun(1,$index)">{{item}}</a>
+				</li>
+			</ul>
+			<ul class="singer_tag_list_ulb">
+				<li ng-repeat="item in inid" ng-class="{tagList:$index==tastb}" ng-click="tastafun(2,$index)">
+					<a href="javascript:;"  ng-click="clifun(2,$index)">{{item}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--获取数据-->
+	<div class="singerlist">
+		<ul class="singerlist_ul">
+			<li ng-repeat="item in ceptA">
+				<a href="#singer/{{item.Fsinger_mid}}"><!--=====================================-->
+				<div class="singerlist_ul_li_box">
+					<div class="ul_li_box_img" >
+						<img alt="我没错(*▔＾▔*)" src="https://y.gtimg.cn/music/photo_new/T001R150x150M000{{item.Fsinger_mid}}.jpg?max_age=2592000"; style="background-image: url(img/singer_300.png);"/>
+					</div>
+					<!--onerror="javascript:this.src='img/singer_300.png';" 当图片加载失败时 -->
+					<h3 class="singerlist_li_tex">{{item.Fsinger_name}}</h3>
+				</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="singer_list_bot">
+	<ul class="singer_list_txt">
+		<li ng-repeat="item in ceptB track by $index">
+			<a href="#singer/{{item.Fsinger_mid}}">{{item.Fsinger_name}}</a>
+		</li>
+	</ul>
+	<!--页码-->
+	<div class="singer_page_nav">
+		<div class="pageindex_l"  ng-click="ifckfun(1,data.data.total_page)" ng-if="namame!=1"><</div>
+		<span class="pageindex" ng-click="namafun(1)" ng-if="namame>=4">1</span>
+		<div class="pagemore" ng-if="namame>=4">...</div>
+		<span class="pageindex" ng-click="namafun(namame-2)" ng-if="namame>=3">{{namame-2}}</span>
+		<span class="pageindex" ng-click="namafun(namame-1)" ng-if="namame>=2">{{namame-1}}</span>
+		<span class="pageindex" ng-click="namafun(namame)" ng-class="{pageclick:namame}">{{namame}}</span>
+		<span class="pageindex" ng-click="namafun(namame+1)" ng-if="namame<=data.data.total_page-1">{{namame+1}}</span>
+		<span class="pageindex" ng-click="namafun(namame+2)" ng-if="namame<=data.data.total_page-2">{{namame+2}}</span>
+		<div class="pagemore"  ng-if="namame<=data.data.total_page-3">...</div>
+		<div class="page_sss"  ng-click="namafun(data.data.total_page)"  ng-if="namame<=data.data.total_page-3">{{data.data.total_page}}</div>
+		<div class="pageindex_r" ng-click="ifckfun(2,data.data.total_page)" ng-if="namame!=data.data.total_page">></div>
+	</div>
+</div>
+
+<!--内容结束了-->

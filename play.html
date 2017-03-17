@@ -1,0 +1,61 @@
+<!--歌曲播放-->
+<link rel="stylesheet" type="text/css" href="css/play.css"/>
+<!--去死吧-->
+<div class="play_con">
+	<div class="play_con_le">
+		<div class="play_le_data">
+			<div class="play_le_data_cover">
+				<img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000{{data.data.songinfo.albummid}}.jpg?max_age=2592000"/>
+			</div>
+			<div class="play_le_data_cont">
+				<div class="play_le_name">{{data.data.name}}</div>
+				<div class="play_le_singer">
+					<i></i>
+					<a href="javascript:;" ng-repeat="item in data.data.songinfo.singer">{{item.name}}</a>
+				</div>
+				<div class="play_le_info">
+					专辑:{{data.data.songinfo.albumname}}
+				</div>
+				<div class="play_le_actions">
+					<a class="data_statistic_green" ng-click="iconPlay()" href="javascript:;"><i></i>{{music}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="play_con_ri">
+		<div class="play_ri_tit">
+			
+		</div>
+		<ul class="play_ri_ul">
+			{{locetexwww}}
+			<li ng-repeat="item in locetex track by $index">{{item}}</li>
+		</ul>
+	</div>
+</div>
+<!--播放器-->
+<div class="mpplayer">
+	<div class="mpplayer_con_img">
+		<img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000{{data.data.songinfo.albummid}}.jpg?max_age=2592000"/>
+	</div>
+	<div class="mpplayer_con_info">
+		{{data.data.name}}<br />
+		<a href="javascript:;" ng-repeat="item in data.data.songinfo.singer">{{item.name}}</a>
+	</div>
+	<div class="mpplayer_con_time">
+		<div class="con_time_le">{{preospe}}</div>
+		<div class="con_time_ri">{{present}}</div>
+	</div>
+	<div class="mpplayer_con_sus">
+		<div class="con_sus_play" ng-click="iconPlay()" ng-class="{'consusplay':objff}"></div>
+		<div class="con_sus_voice" ng-click="voice()"  ng-class="{'consusvoice':muted}"></div>
+	</div>
+	<div id="progiff" class="mpplayer_con">
+		<div id="progi" class="mpplayer_progress" style="width: {{currdura}};">
+			<i></i>
+		</div>
+		
+	</div>
+</div>
+<!--播放器-->
+<!--歌曲-->
+<video id="videoId" ng-src="{{trustSrc(daurl)}}" controls preload="preload" loop="loop" style="display: none;"></video>

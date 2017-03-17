@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Aokiji Music</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="icon" href="favicon.ico" />
+	</head>
+	<body ng-app="myApp" ng-controller="bycontroller">
+		<!--公共头部开始-->
+		<div class="box_top">
+			<div id="boxTopList" class="box_top_list">
+				<ul>
+					<li><a href="#homepage" ng-class="{indpxss:1==ndpx}" ng-click="ndpxex(1)">首页</a></li>
+					<li><a href="#singer" ng-class="{indpxss:2==ndpx}" ng-click="ndpxex(2)">歌手</a></li>
+					<li><a href="#album" ng-class="{indpxss:3==ndpx}" ng-click="ndpxex(3)">专辑</a></li>
+					<li><a href="#ranking" ng-class="{indpxss:4==ndpx}" ng-click="ndpxex(4)">排行榜</a></li>
+					<li><a href="#mvVideo" ng-class="{indpxss:5==ndpx}" ng-click="ndpxex(5)">MV</a></li>
+				</ul>
+				<div class="box_top_list_ri">
+					<form>
+						<input id="riInput" class="list_ri_input" type="text" placeholder="歌手" ng-click="byclick(inp)" ng-change="byclick(inp)"  ng-blur="bycli()" ng-model="inp" />
+						<button  class="list_ri_btn">
+							<i></i>
+						</button>
+						<div id="js_smartbox" class="js_smartbox" ng-if="byclif">
+							<ul class="js_album">
+								<li>{{jsda.data.album.name}}</li>
+								<li ng-repeat="item in jsda.data.album.itemlist"><a href="#/album/{{item.mid}}"><span title="{{item.name}}">{{item.name}}</span><p title="{{item.singer}}">{{item.singer}}</p></a></li>
+							</ul>
+							<ul class="js_mv">
+								<li>{{jsda.data.mv.name}}</li>
+								<li ng-repeat="item in jsda.data.mv.itemlist"><a href="#/mvVideo/{{item.mid}}"><span title="{{item.name}}">{{item.name}}</span><p title="{{item.singer}}">{{item.singer}}</p></a></li>
+							</ul>
+							<ul class="js_singer">
+								<li>{{jsda.data.singer.name}}</li>
+								<li ng-repeat="item in jsda.data.singer.itemlist"><a href="#/singer/{{item.mid}}" title="{{item.name}}"><span>{{item.name}}</span><p title="{{item.singer}}">{{item.singer}}</p></a></li>
+							</ul>
+							<ul class="js_song">
+								<li>{{jsda.data.song.name}}</li>
+								<li ng-repeat="item in jsda.data.song.itemlist"><a href="#/singer/pers/{{item.id}}" title="{{item.name}}"><span>{{item.name}}</span><p title="{{item.singer}}">{{item.singer}}</p></a></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--公共头部结束-->
+		<div id="bg_box" class="bg_box bg_box_one">
+			<div class="box_one"><img src="img/florwe1.png"/></div>
+			<div class="box_one"><img src="img/florwe2.png"/></div>
+			<div class="box_two"><img src="img/florwe3.png"/></div>
+			<div class="box_two"><img src="img/florwe4.png"/></div>
+			<div class="box_three"><img src="img/florwe5.png"/></div>
+			<div class="box_three"><img src="img/florwe6.png"/></div>
+			<div class="box_four"><img src="img/florwe7.png"/></div>
+			<div class="box_four"><img src="img/florwe8.png"/></div>
+		</div>
+		<div class="content" ng-view>
+			
+		</div>
+		<!--底部公共样式-->
+		<div class="box_bot">
+			<div class="box_bot_con">
+				<p>关于xu | xu zhen yang | 服务条款 | 用户服务协议 | 隐私政策 | 广告服务 | 腾讯招聘 | 客服中心 | 网站导航</p>
+				<p>Xu Zhenyang. Copyright © 2017-2017.All rights reserved.</p>
+				<p>版权所有 德玛西亚文化经营许可证</p>
+			</div>
+		</div>
+		<!--底部公共样式-->
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jsonp.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>
